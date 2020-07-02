@@ -43,7 +43,7 @@ const signIn = handleTypedActions(
     }
   },
 )
-// later combine your reducer
+// later combine your reducers
 ```
 
 ### Dispatch your action (with `react-redux-dispatch-async` if you will 👍 )
