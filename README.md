@@ -39,6 +39,32 @@ const signIn = handleTypedActions(
 // later combine your reducer
 ```
 
+### Dispatch your action (with react-redux-dispatch-async if you will 👍 )
+```tsx
+import React from 'react'
+import { useDispatchAsync } from 'react-redux-dispatch-async'
+
+export default function MyUserInterface({ credential }: { credential: Credential }) {
+  // 👉 pass action and arguments into the array
+  const { status, result, error } = useDispatchAsync(signInRequest, [credential])
+
+  switch (status) {
+    case 'loading':
+      return <AppLoader />
+    case 'error':
+      return <Text>{error.message}</Text>
+    case 'success':
+      return <User {...result} />
+    case 'timeout':
+      return <Text>{'timeout ¯\\_(ツ)_//¯'}</Text>
+    case 'canceled':
+      return <Text>{'canceled ¯\\_(ツ)_//¯'}</Text>
+    default:
+      return null
+  }
+}
+```
+
 ## Local Development
 
 Below is a list of commands you will probably find useful.
