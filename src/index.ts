@@ -106,11 +106,11 @@ export function handleTypedAction<State, Payload>(
 }
 
 export function handleTypedActions<State>(
-  handlers: Array<TypedActionHandler<State, any>>,
+  handlers: TypedActionHandler<State, any>[],
   defaultState: State,
-): Reducer<State, Action<any>> {
+): Reducer<any, Action<any>> {
   // Create a reducer for each action handler
-  const reducers: Array<Reducer<State, any>> = handlers.map(handler => {
+  const reducers: Reducer<State, any>[] = handlers.map(handler => {
     return handleTypedAction(handler, defaultState)
   })
   // Combine all reducers to reduce the same (state/action)
