@@ -51,17 +51,17 @@ const signIn = handleTypedActions(
 import React from 'react'
 import { useDispatchAsync } from 'react-redux-dispatch-async'
 
-export default function MyUserInterface({ credential }: { credential: Credential }) {
+export default function MyUserInterface({ id }: { id: string }) {
   // 👉 pass action and arguments into the array
-  const { status, result, error } = useDispatchAsync(signInRequest, [credential])
+  const response = useDispatchAsync(getUserActionRequest, [id])
 
-  switch (status) {
+  switch (response.status) {
     case 'loading':
       return <AppLoader />
     case 'error':
-      return <Text>{error.message}</Text>
+      return <Text>{response.error.message}</Text>
     case 'success':
-      return <User {...result} />
+      return <User {...response.result} />
     case 'timeout':
       return <Text>{'timeout ¯\\_(ツ)_//¯'}</Text>
     case 'canceled':
@@ -71,6 +71,7 @@ export default function MyUserInterface({ credential }: { credential: Credential
   }
 }
 ```
+👉 [react-redux-dispatch-async](https://github.com/xcarpentier/react-redux-dispatch-async)
 
 ## Local Development
 
