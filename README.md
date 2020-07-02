@@ -10,11 +10,12 @@
 
 ## How to use it?
 
-### Create typed and async actions
+### Install
 ```
 yarn add redux-actions-ts
 ```
 
+### Create typed and async actions
 ```ts
 import { createAsyncActions, createTypedAction } form 'redux-actions-ts'
 // async example
