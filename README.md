@@ -13,6 +13,7 @@
 ### Create typed and async actions
 
 ```ts
+// async example
 const {
   request: signInRequest,
   success: signInSuccess,
@@ -23,7 +24,7 @@ const {
 // type Credentials = { username: string, password: string }
 // type User = { name: string }
 
-
+// just typed action (ie. not async)
 const signOut = createTypedAction<null>('SIGN_OUT')
 ```
 
