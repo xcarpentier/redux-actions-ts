@@ -11,8 +11,12 @@
 ## How to use it?
 
 ### Create typed and async actions
+```
+yarn add redux-actions-ts
+```
 
 ```ts
+import { createAsyncActions, createTypedAction } form 'redux-actions-ts'
 // async example
 const {
   request: signInRequest,
@@ -31,6 +35,8 @@ const signOut = createTypedAction<null>('SIGN_OUT')
 ### Handle actions with reducer
 
 ```ts
+import { handleTypedActions, createTypedHandler } form 'redux-actions-ts'
+
 const signIn = handleTypedActions(
   [
     createTypedHandler(signInSuccess, signInSuccessReducer),
@@ -43,7 +49,7 @@ const signIn = handleTypedActions(
     }
   },
 )
-// later combine your reducers
+// later combine your reducers...
 ```
 
 ### Dispatch your action (with `react-redux-dispatch-async` if you will 👍 )
