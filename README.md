@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://www.npmjs.com/package/redux-actions-ts"><img alt="npm downloads" src="https://img.shields.io/npm/dm/redux-actions-ts.svg"/></a>
+  <a href="https://www.npmjs.com/package/redux-actions-ts"><img alt="npm version" src="https://badge.fury.io/js/redux-actions-ts.svg"/></a>
+  <a href="#hire-an-expert"><img src="https://img.shields.io/badge/%F0%9F%92%AA-hire%20an%20expert-brightgreen"/></a>
+</p>
 # Redux-Actions-TS
 
 ⚛️ Redux-Actions with TypeScript helper package
@@ -39,7 +44,7 @@ const signIn = handleTypedActions(
 // later combine your reducer
 ```
 
-### Dispatch your action (with react-redux-dispatch-async if you will 👍 )
+### Dispatch your action (with `react-redux-dispatch-async` if you will 👍 )
 ```tsx
 import React from 'react'
 import { useDispatchAsync } from 'react-redux-dispatch-async'
@@ -88,3 +93,7 @@ The package is optimized and bundled with Rollup into multiple formats (CommonJS
 
 Runs the test watcher (Jest) in an interactive mode.
 By default, runs tests related to files changed since the last commit.
+
+## Hire an expert!
+
+Looking for a ReactNative freelance expert with more than 14 years of experience? Contact Xavier from his [website](https://xaviercarpentier.com)!
